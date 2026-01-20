@@ -1,0 +1,37 @@
+### Page state
+- Page URL: http://localhost:5173/
+- Page Title: Snelofferte Aanvragen | Renovaluxe
+- Page Snapshot:
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - img "Renovaluxe Logo" [ref=e4]
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Quickscan Renovatie" [level=1] [ref=e7]
+      - paragraph [ref=e8]: Verkrijg binnen 1 minuut een prijsindicatie voor uw project.
+    - generic [ref=e10]: Stap 2 van 6
+    - generic [ref=e12]:
+      - generic [ref=e31]:
+        - heading "Om wat voor type pand gaat het?" [level=2] [ref=e32]
+        - generic [ref=e33]:
+          - generic [ref=e34] [cursor=pointer]:
+            - radio "Bedrijfshal Bedrijfshal / Loods"
+            - img "Bedrijfshal" [ref=e35]
+            - generic [ref=e36]: Bedrijfshal / Loods
+          - generic [ref=e37] [cursor=pointer]:
+            - radio "Kantoorpand Kantoorpand"
+            - img "Kantoorpand" [ref=e38]
+            - generic [ref=e39]: Kantoorpand
+          - generic [ref=e40] [cursor=pointer]:
+            - radio "Agrarisch Agrarisch Gebouw"
+            - img "Agrarisch" [ref=e41]
+            - generic [ref=e42]: Agrarisch Gebouw
+          - generic [ref=e43] [cursor=pointer]:
+            - radio "Anders Anders / Overig"
+            - img "Anders" [ref=e44]
+            - generic [ref=e45]: Anders / Overig
+      - generic [ref=e28]:
+        - button "Terug" [ref=e46] [cursor=pointer]
+        - button "Volgende Stap" [ref=e29] [cursor=pointer]
+```

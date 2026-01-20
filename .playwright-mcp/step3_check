@@ -1,0 +1,29 @@
+### Page state
+- Page URL: http://localhost:5173/
+- Page Title: Snelofferte Aanvragen | Renovaluxe
+- Page Snapshot:
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - img "Renovaluxe Logo" [ref=e4]
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Quickscan Renovatie" [level=1] [ref=e7]
+      - paragraph [ref=e8]: Verkrijg binnen 1 minuut een prijsindicatie voor uw project.
+    - generic [ref=e10]: Stap 3 van 6
+    - generic [ref=e12]:
+      - generic [ref=e47]:
+        - heading "Wat zijn de geschatte afmetingen?" [level=2] [ref=e48]
+        - paragraph [ref=e49]: Een gemiddelde schatting is voldoende voor de indicatie.
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Dakoppervlakte
+            - generic [ref=e53]: 800 m²
+          - slider [ref=e54]: "800"
+        - generic [ref=e55] [cursor=pointer]:
+          - checkbox "Ik weet de exacte afmetingen niet, neem contact op voor opmeting" [ref=e56]
+          - text: Ik weet de exacte afmetingen niet, neem contact op voor opmeting
+      - generic [ref=e28]:
+        - button "Terug" [ref=e46] [cursor=pointer]
+        - button "Volgende Stap" [ref=e29] [cursor=pointer]
+```

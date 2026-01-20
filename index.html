@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snelofferte Aanvragen | Renovaluxe</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container fade-in">
+    <!-- Logo Header -->
+    <header class="logo-container">
+      <img src="https://renovaluxe.nl/wp-content/uploads/2026/01/logo_footer_renovaluxe.svg" alt="Renovaluxe Logo"
+        style="height: 50px;">
+    </header>
+
+    <section id="formArea">
+      <div style="margin-bottom: 30px;">
+        <h1>Quickscan Renovatie</h1>
+        <p class="subtitle">Verkrijg binnen 1 minuut een prijsindicatie voor uw project.</p>
+      </div>
+
+      <!-- Progress -->
+      <div class="progress-container">
+        <div class="step-indicator" id="stepIndicator">Stap 1 van 6</div>
+        <div class="progress-bar-bg">
+          <div id="progressBar" class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <form id="quickscanForm">
+        <!-- Step 1: Project Type -->
+        <div class="step fade-in" data-step="1">
+          <h2>Wat wilt u laten renoveren?</h2>
+          <div class="option-grid">
+            <label class="option-card">
+              <input type="radio" name="projectType" value="dak" required>
+              <img src="https://renovaluxe.nl/wp-content/uploads/2025/07/dakrenovatie.jpg" class="option-image"
+                alt="Dakrenovatie">
+              <div class="option-label">Dakrenovatie</div>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="projectType" value="gevel">
+              <img src="https://renovaluxe.nl/wp-content/uploads/2025/07/gevelrenovatie.jpg" class="option-image"
+                alt="Gevelrenovatie">
+              <div class="option-label">Gevelrenovatie</div>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="projectType" value="beide">
+              <!-- Generic renovation image -->
+              <img
+                src="https://renovaluxe.nl/wp-content/uploads/2026/01/fotografie-renovaluxe-15-oktober-2025-drone-007ab.jpg"
+                class="option-image" alt="Dak en Gevel">
+              <div class="option-label">Dak én Gevel</div>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="projectType" value="asbest">
+              <img src="https://renovaluxe.nl/wp-content/uploads/2025/07/asbest_saneren.jpg" class="option-image"
+                alt="Asbest Saneren">
+              <div class="option-label">Asbest Saneren</div>
+            </label>
+          </div>
+          <div id="andersGroup" class="hidden fade-in">
+            <label class="field-label">Omschrijf kort uw project</label>
+            <input type="text" name="projectOmschrijving" placeholder="Bijv. Interieur renovatie...">
+          </div>
+        </div>
+
+        <!-- Step 2: Pand Type -->
+        <div class="step hidden fade-in" data-step="2">
+          <h2>Om wat voor type pand gaat het?</h2>
+          <div class="option-grid">
+            <label class="option-card">
+              <input type="radio" name="typePand" value="bedrijfshal" required>
+              <img src="https://renovaluxe.nl/wp-content/uploads/2026/01/uitg3.jpg" class="option-image"
+                alt="Bedrijfshal">
+              <div class="option-label">Bedrijfshal / Loods</div>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="typePand" value="kantoorpand">
+              <img src="https://renovaluxe.nl/wp-content/uploads/2026/01/uitg4.jpg" class="option-image"
+                alt="Kantoorpand">
+              <div class="option-label">Kantoorpand</div>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="typePand" value="agrarisch">
+              <!-- Using a drone shot that looks somewhat like large grounds -->
+              <img
+                src="https://renovaluxe.nl/wp-content/uploads/2026/01/fotografie-renovaluxe-15-oktober-2025-drone-041.jpg"
+                class="option-image" alt="Agrarisch">
+              <div class="option-label">Agrarisch Gebouw</div>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="typePand" value="anders">
+              <img src="https://renovaluxe.nl/wp-content/uploads/2026/01/uig.jpg" class="option-image" alt="Anders">
+              <div class="option-label">Anders / Overig</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 3: Afmetingen -->
+        <div class="step hidden fade-in" data-step="3">
+          <h2>Wat zijn de geschatte afmetingen?</h2>
+          <p class="subtitle" style="margin-bottom: 24px;">Een gemiddelde schatting is voldoende voor de indicatie.</p>
+
+          <div id="dakArea" class="hidden field-group range-container">
+            <div class="range-header">
+              <label class="field-label">Dakoppervlakte</label>
+              <span class="range-val"><span id="dakVal">800</span> m²</span>
+            </div>
+            <input type="range" name="dakOppervlakte" min="100" max="5000" step="100" value="800">
+          </div>
+
+          <div id="gevelArea" class="hidden field-group range-container">
+            <div class="range-header">
+              <label class="field-label">Geveloppervlakte</label>
+              <span class="range-val"><span id="gevelVal">400</span> m²</span>
+            </div>
+            <input type="range" name="gevelOppervlakte" min="50" max="3000" step="50" value="400">
+          </div>
+
+          <div id="asbestArea" class="hidden field-group range-container">
+            <div class="range-header">
+              <label class="field-label">Oppervlakte asbest</label>
+              <span class="range-val"><span id="asbestVal">200</span> m²</span>
+            </div>
+            <input type="range" name="asbestOppervlakte" min="50" max="2000" step="50" value="200">
+          </div>
+
+          <label
+            style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px; margin-top: 10px;">
+            <input type="checkbox" name="onbekendeAfmeting">
+            Ik weet de exacte afmetingen niet, neem contact op voor opmeting
+          </label>
+        </div>
+
+        <!-- Step 4: Situatie -->
+        <div class="step hidden fade-in" data-step="4">
+          <h2>Huidige situatie & Planning</h2>
+
+          <div class="field-group">
+            <label class="field-label">Wat is het bouwjaar van het pand?</label>
+            <select name="bouwjaar">
+              <option value="weet_niet">Weet ik niet</option>
+              <option value="voor_1970">Voor 1970</option>
+              <option value="1970_1990">1970 - 1990</option>
+              <option value="1990_2010">1990 - 2010</option>
+              <option value="na_2010">Na 2010</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Huidige aanwezigheid van asbest?</label>
+            <div style="display: flex; gap: 10px;">
+              <label
+                style="flex:1; border: 1px solid var(--border); padding: 12px; border-radius: var(--radius); cursor: pointer; text-align: center;">
+                <input type="radio" name="asbestAanwezig" value="ja"> Ja
+              </label>
+              <label
+                style="flex:1; border: 1px solid var(--border); padding: 12px; border-radius: var(--radius); cursor: pointer; text-align: center;">
+                <input type="radio" name="asbestAanwezig" value="nee"> Nee
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Gewenste uitvoeringstermijn?</label>
+            <select name="timing">
+              <option value="zo_snel_mogelijk">Zo snel mogelijk</option>
+              <option value="3_6_maanden">Binnen 3-6 maanden</option>
+              <option value="6_12_maanden">Binnen 6-12 maanden</option>
+              <option value="orienteren">Nog oriënterend</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Step 5: Wensen -->
+        <div class="step hidden fade-in" data-step="5">
+          <h2>Extra opties & Wensen</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px;">
+            <label
+              style="border: 1px solid var(--border); padding: 12px; border-radius: var(--radius); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" name="extra" value="zonnepanelen"> Zonnepanelen
+            </label>
+            <label
+              style="border: 1px solid var(--border); padding: 12px; border-radius: var(--radius); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" name="extra" value="isolatie"> Extra isolatie
+            </label>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Overige opmerkingen</label>
+            <textarea name="opmerkingen" placeholder="Zijn er nog bijzonderheden waar we rekening mee moeten houden?"
+              rows="4"></textarea>
+          </div>
+        </div>
+
+        <!-- Step 6: Contact -->
+        <div class="step hidden fade-in" data-step="6">
+          <h2>Ontvang uw indicatie</h2>
+          <p class="subtitle" style="margin-bottom: 24px;">Vul uw gegevens in om de berekening te zien.</p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="field-group">
+              <label class="field-label">Bedrijfsnaam</label>
+              <input type="text" name="bedrijfsnaam" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Contactpersoon</label>
+              <input type="text" name="contactpersoon" required>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">E-mailadres</label>
+            <input type="email" name="email" required>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Telefoonnummer</label>
+            <input type="tel" name="telefoon" required>
+          </div>
+
+          <label
+            style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px; margin-top: 10px; color: var(--text-muted);">
+            <input type="checkbox" name="privacy" required> Ik ga akkoord met de privacyverklaring
+          </label>
+        </div>
+
+        <!-- Nav -->
+        <div class="btn-group">
+          <button type="button" id="prevBtn" class="btn btn-secondary hidden">Terug</button>
+          <button type="button" id="nextBtn" class="btn btn-primary">Volgende</button>
+        </div>
+      </form>
+
+      <div id="resultSection" class="hidden fade-in"></div>
+    </section>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
